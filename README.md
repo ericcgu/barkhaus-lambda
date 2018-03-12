@@ -2,18 +2,18 @@
 
 This is the backend repo for Pet and Client Management Application.
 
-## Backend:
+## Backend: barkhaus-lambda
 
 Amazon AWS Lambda Serverless
 
 PostgreSQL / RDS 
 
-pg-promise + Bluebird
+Pg-Promise + Bluebird
 
 REST
 
 
-## Frontend: (barkhaus-vue)
+## Frontend: barkhaus-vue
 
 Vue.js
 
