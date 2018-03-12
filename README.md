@@ -8,7 +8,7 @@ Amazon AWS Lambda Serverless
 
 PostgreSQL / RDS 
 
-Pg-Promise + Bluebird
+Pg-Promise (Promises/A+ interface) + Bluebird
 
 REST
 
