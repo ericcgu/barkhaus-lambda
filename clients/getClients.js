@@ -2,8 +2,6 @@
 
 const db = require("../db.js")
 
-const message = db.getClients
-
 module.exports.getClients = (event, context, callback) => {
   db.any('SELECT * FROM public."Clients";')
   .then(function (data) {
