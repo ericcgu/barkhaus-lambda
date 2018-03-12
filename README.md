@@ -2,7 +2,10 @@
 
 Backend:
 Amazon AWS Lambda Serverless
-PostgreSQL/RDS REST
+PostgreSQL / RDS 
+pg-promise + Bluebird
+REST
+
 
 Frontend:
 Vue.js
