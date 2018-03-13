@@ -24,3 +24,10 @@ functions:
       - http:
           path: Clients/{ClientID}
           method: get
+
+  deleteClient:
+    handler: clients/deleteClient.deleteClient
+    events:
+      - http:
+          path: Clients/{ClientID}
+          method: delete        
