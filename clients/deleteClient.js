@@ -9,7 +9,7 @@ module.exports.deleteClient = (event, context, callback) => {
         .then(function (result) {
             const response = {
                 statusCode: 200,
-                body: JSON.stringify(result.rowCount)
+                body: 'Deleted '+ JSON.stringify(result.rowCount) + 'rows.'
             };
             callback(null, response);
         })
