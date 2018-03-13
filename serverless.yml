@@ -30,4 +30,11 @@ functions:
     events:
       - http:
           path: Clients/{ClientID}
-          method: delete        
+          method: delete
+
+  createClient:
+    handler: clients/createClient.createClient
+    events:
+      - http:
+          path: Clients
+          method: post                 
