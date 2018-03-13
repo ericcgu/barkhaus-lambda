@@ -17,3 +17,10 @@ functions:
       - http:
           path: Clients
           method: get
+
+  getClient:
+    handler: clients/getClient.getClient
+    events:
+      - http:
+          path: Clients/{ClientID}
+          method: get
