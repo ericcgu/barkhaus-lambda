@@ -1,5 +1,7 @@
 'use strict';
+
 const db = require("../db.js")
+
 module.exports.createClient = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const body = JSON.parse(event.body);
