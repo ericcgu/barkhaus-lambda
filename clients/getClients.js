@@ -13,7 +13,7 @@ module.exports.getClients = (event, context, callback) => {
     callback(null, response);
   })
   .catch(function (err) {
-    return next(err);
+    return err;
   });
 };
 
