@@ -14,7 +14,7 @@ module.exports.getClient = (event, context, callback) => {
             callback(null, response);
         })
         .catch(function (err) {
-            return err;
+            callback(err);
         });
 };
 
