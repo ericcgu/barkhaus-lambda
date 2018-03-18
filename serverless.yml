@@ -37,4 +37,13 @@ functions:
     events:
       - http:
           path: Clients
-          method: post                 
+          method: post
+
+  updateClient:
+    handler: clients/updateClient.updateClient
+    events:
+      - http:
+          path: Clients/{ClientID}
+          method: patch
+          
+          
