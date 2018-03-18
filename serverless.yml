@@ -11,39 +11,39 @@ provider:
   timeout: 300
 
 functions:
-  getClients:
-    handler: clients/getClients.getClients
+  getDogs:
+    handler: Dogs/getDogs.getDogs
     events:
       - http:
-          path: Clients
+          path: Dogs
           method: get
 
-  getClient:
-    handler: clients/getClient.getClient
+  getDog:
+    handler: Dogs/getDog.getDog
     events:
       - http:
-          path: Clients/{ClientID}
+          path: Dogs/{DogID}
           method: get
 
-  deleteClient:
-    handler: clients/deleteClient.deleteClient
+  deleteDog:
+    handler: Dogs/deleteDog.deleteDog
     events:
       - http:
-          path: Clients/{ClientID}
+          path: Dogs/{DogID}
           method: delete
 
-  createClient:
-    handler: clients/createClient.createClient
+  createDog:
+    handler: Dogs/createDog.createDog
     events:
       - http:
-          path: Clients
+          path: Dogs
           method: post
 
-  updateClient:
-    handler: clients/updateClient.updateClient
+  updateDog:
+    handler: Dogs/updateDog.updateDog
     events:
       - http:
-          path: Clients/{ClientID}
+          path: Dogs/{DogID}
           method: patch
           
           

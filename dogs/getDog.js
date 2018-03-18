@@ -2,10 +2,10 @@
 
 const db = require("../db.js")
 
-module.exports.getClient = (event, context, callback) => {
+module.exports.getDog = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const ClientID = parseInt(event.pathParameters.ClientID);
-    db.one('SELECT * from public."Clients" WHERE "ClientID" = $1', ClientID)
+    const DogID = parseInt(event.pathParameters.DogID);
+    db.one('SELECT * from public."Dogs" WHERE "DogID" = $1', DogID)
         .then(function (data) {
             const response = {
                 statusCode: 200,

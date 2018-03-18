@@ -2,10 +2,10 @@
 
 const db = require("../db.js")
 
-module.exports.deleteClient = (event, context, callback) => {
+module.exports.deleteDog = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const ClientID = parseInt(event.pathParameters.ClientID);
-    db.result('DELETE FROM public."Clients" WHERE "ClientID" = $1', ClientID)
+    const DogID = parseInt(event.pathParameters.DogID);
+    db.result('DELETE FROM public."Dogs" WHERE "DogID" = $1', DogID)
         .then(function (result) {
             const response = {
                 statusCode: 200,

@@ -2,9 +2,9 @@
 
 const db = require("../db.js")
 
-module.exports.getClients = (event, context, callback) => {
+module.exports.getDogs = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  db.any('SELECT * FROM public."Clients";')
+  db.any('SELECT * FROM public."Dogs";')
   .then(function (data) {
     const response = {
       statusCode: 200,

@@ -2,10 +2,10 @@
 
 const db = require("../db.js")
 
-module.exports.deleteClient = (event, context, callback) => {
+module.exports.deleteTime = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const ClientID = parseInt(event.pathParameters.ClientID);
-    db.result('DELETE FROM public."Clients" WHERE "ClientID" = $1', ClientID)
+    const TimeID = parseInt(event.pathParameters.TimeID);
+    db.result('DELETE FROM public."Times" WHERE "TimeID" = $1', TimeID)
         .then(function (result) {
             const response = {
                 statusCode: 200,

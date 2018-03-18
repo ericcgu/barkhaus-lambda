@@ -1,6 +1,6 @@
 # barkhaus-lambda
 
-This is the backend repo for Pet and Client Management Application.
+This is the backend repo for Pet and Dog Management Application.
 
 ## Backend: barkhaus-lambda
 

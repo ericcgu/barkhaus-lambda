@@ -2,11 +2,11 @@
 
 const db = require("../db.js")
 
-module.exports.updateClient = (event, context, callback) => {
+module.exports.updateTime = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
-    const ClientID = parseInt(event.pathParameters.ClientID);
+    const TimeID = parseInt(event.pathParameters.TimeID);
     const body = (event.body);
-    db.result('UPDATE public."Clients" SET "FirstName" = $2, "LastName" = $3 WHERE "ClientID" = $1', [ClientID, body.FirstName, body.LastName])
+    db.result('UPDATE public."Times" SET "FirstName" = $2, "LastName" = $3 WHERE "TimeID" = $1', [TimeID, body.FirstName, body.LastName])
         .then(function (result) {
             const response = {
                 statusCode: 200,

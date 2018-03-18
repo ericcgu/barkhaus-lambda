@@ -2,10 +2,10 @@
 
 const db = require("../db.js")
 
-module.exports.createClient = (event, context, callback) => {
+module.exports.createDog = (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const body = JSON.parse(event.body);
-    db.none('INSERT INTO public."Clients"("FirstName", "LastName") VALUES(${FirstName}, ${LastName})',
+    db.none('INSERT INTO public."Dogs"("DogName", "ClientId") VALUES(${DogName}, ${ClientId})',
             body)
         .then(function () {
             const response = {
